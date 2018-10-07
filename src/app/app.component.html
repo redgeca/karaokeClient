@@ -8,7 +8,8 @@
 <div class="toto">
 <form class="example-form">
   <mat-form-field class="example-full-width">
-    <input type="text" placeholder="Rechercher une chanson" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <input type="text" placeholder="Rechercher une chanson" 
+        aria-label="Number" matTooltip= "{{myControl.value}}" matInput [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete" class="autocomp">
       <mat-option *ngFor="let option of options" [value]="option.title">
         {{ option.title }}

@@ -45,23 +45,15 @@ export class AppComponent {
     this.errorMessage = ""; 
     this.searchService.request(this.myControl.value, this.myName.value, null).subscribe(
       response => {
-      console.log('Tada!!!!!');
-      console.log(response);
       this.successMessage = song + ' : ' + response.toString();
     }, error => {
       console.log(error.error)
       this.errorMessage = error.error;
     });
-//    this.successMessage = this.myControl.value.length % 2 == 0 ? "YEAH" : "" ;
-//    this.errorMessage = this.myControl.value.length % 2 == 1 ? "ZUT" : "";
-
-//    console.log(this.successMessage);
-//    console.log(this.errorMessage);
 
     this.myControl.setValue("");
     this.options = [];
 
     localStorage.setItem("singerName", this.myName.value);
-
   }
 }

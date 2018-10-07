@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MatAutocompleteModule, MatToolbarModule, MatButtonModule, MatFormFieldModule,
-MatInputModule } from '@angular/material';
+MatInputModule, MatTooltipModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
@@ -21,7 +21,8 @@ import { SearchService } from './search.service';
     MatFormFieldModule,
     MatInputModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTooltipModule
   ],
   exports: [
   ],
